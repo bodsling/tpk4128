@@ -1,0 +1,8 @@
+cd - Change directory
+ls - list directories
+pwd - returns current path
+cp - copy files
+mv - move files
+- rm - remove files
+date - Command that gives you date and time of the system
+chmod - Modify the file mode, chmod +x "filename" gives the user premission to execute the file
