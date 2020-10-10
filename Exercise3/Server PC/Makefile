@@ -9,5 +9,5 @@ OBJ = server3.o serverUtils.o
 
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) -c -o $@ $<
-client: $(OBJ)
+server: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^

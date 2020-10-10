@@ -6,10 +6,10 @@
 #include <netinet/in.h> 
 #include <string.h> 
 #include <pthread.h>
-#include "serverUtils.h"
+#include "../Headers/serverUtils.h"
 #include <netinet/in.h>
 #include <netdb.h>
-#define PORT 5000
+#define PORT 8080
 #define IP_PI 192.168.1.1
 
 
@@ -54,10 +54,10 @@ int main(int argc, char const *argv[])
 
     /* Describing internet socket address */
     address.sin_family = AF_INET; /* IPv4 */
-    address.sin_addr.s_addr = inet_addr("192.168.1.143");
+    address.sin_addr.s_addr = htonl(INADDR_ANY);
     //inet_aton("192.168.1.147",&address.sin_addr.s_addr);
     //address.sin_addr.s_addr = INADDR_ANY; /* Localhost */
-    address.sin_port = htons( PORT ); /* Binding to port 8080 */
+    address.sin_port = htons( PORT ); /*3 Binding to port 8080 */
        
     // Forcefully attaching socket to the port 8080 
     if (bind(server_fd, (struct sockaddr *)&address,  
