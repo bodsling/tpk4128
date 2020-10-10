@@ -62,7 +62,7 @@ void *readLetterByLetter(void *args)
         printf("%s\n", buffer); 
 
         strcat(newName,buffer);
-        free(actualArgs->charstring);
+        //free(actualArgs->charstring);
         actualArgs->charstring = malloc(strlen(newName));
         strcpy(actualArgs->charstring,newName);
         free(newName);

@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
     address.sin_addr.s_addr = htonl(INADDR_ANY);
     //inet_aton("192.168.1.147",&address.sin_addr.s_addr);
     //address.sin_addr.s_addr = INADDR_ANY; /* Localhost */
-    address.sin_port = htons( PORT ); /*3 Binding to port 8080 */
+    address.sin_port = htons( PORT ); /* Binding to port 8080 */
        
     // Forcefully attaching socket to the port 8080 
     if (bind(server_fd, (struct sockaddr *)&address,  
